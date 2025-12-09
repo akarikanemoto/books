@@ -1,0 +1,89 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "A1 Gothic", sans-serif;
+}
+
+/* タイトルセクション */
+.title-section {
+    background: #f2f2f2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.title-img {
+    width: 60%;
+    opacity: 0;
+    animation: fadeInUp 1.8s forwards;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 2. 動画 */
+.video-section {
+    position: relative;
+    height: 100vh;
+    background: black;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+#bgVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 説明画像 */
+.setumei-img {
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    width: 40%;
+    opacity: 0;
+    transform: translateX(40px);
+    animation: popIn 1s forwards 1.5s;
+}
+
+@keyframes popIn {
+    0%   { opacity: 0; transform: translateX(40px) scale(0.95); }
+    80%  { opacity: 1; transform: translateX(0) scale(1.05); }
+    100% { transform: translateX(0) scale(1); }
+}
+
+/* スクロールして下さい */
+.scroll-text {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+/* 3. Stickyセクション */
+.sticky-section {
+    height: 120vh;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sticky-wrap {
+    position: sticky;
+    top: 20vh;
+}
+
+.sticky-img {
+    width: 60%;
+}
