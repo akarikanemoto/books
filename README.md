@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>演出ページ</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Relay</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- 1. タイトルセクション -->
-<section class="title-section">
-    <img src="img/title.png" class="title-img">
+<section id="titleSection" class="title-section">
+    <img src="title.png" class="title-img" alt="title">
 </section>
 
 <!-- 2. 動画セクション -->
-<section class="video-section">
-    <video id="bgVideo" src="video/video2.mp4" muted playsinline></video>
+<section id="videoSection" class="video-section">
+    <video id="bgVideo" src="video2.mp4" autoplay muted playsinline loop></video>
 
-    <img src="img/setumei.png" class="setumei-img">
+    <img src="setumei.png" id="setumeiImg" class="setumei">
 
-    <p class="scroll-text">スクロールしてください</p>
+    <div id="scrollHint" class="scroll-hint">▼ スクロールしてください ▼</div>
 </section>
 
-<!-- 3. Stickyセクション（背景は固定画像） -->
-<section class="sticky-section" style="background-image:url('img/bg.jpg');">
-    <div class="sticky-wrap">
-        <img src="img/namae.png" class="sticky-img">
+<!-- 3. Sticky セクション（namae） -->
+<section class="sticky-section" style="background-image: url('bg_main2.png')">
+    <div class="sticky-content">
+        <img src="namae.png" class="content-img">
     </div>
 </section>
 
-<section class="sticky-section" style="background-image:url('img/bg.jpg');">
-    <div class="sticky-wrap">
-        <img src="img/arasuji.png" class="sticky-img">
+<!-- 4. Sticky セクション（arasuji） -->
+<section class="sticky-section" style="background-image: url('bg_main2.png')">
+    <div class="sticky-content">
+        <img src="arasuji.png" class="content-img">
     </div>
 </section>
 
