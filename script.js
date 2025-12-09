@@ -18,8 +18,3 @@ video.addEventListener("timeupdate", () => {
         video.play();
     }
 });
-
-/* ▼ 説明から3秒後に「スクロールしてください」表示 */
-setTimeout(() => {
-    document.querySelector(".scroll-text").style.opacity = 1;
-}, 3500);
