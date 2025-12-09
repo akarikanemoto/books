@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<!-- 1. タイトルセクション -->
-<section id="titleSection" class="title-section">
-    <img src="title.png" class="title-img" alt="title">
-</section>
+  <!-- =========================== -->
+  <!-- ① タイトルセクション       -->
+  <!-- =========================== -->
+  <section class="title-section">
+      <img src="title.png" class="title-img">
+  </section>
 
-<!-- 2. 動画セクション -->
-<section id="videoSection" class="video-section">
-    <video id="bgVideo" src="video2.mp4" autoplay muted playsinline loop></video>
 
-    <img src="setumei.png" id="setumeiImg" class="setumei">
-
-</section>
-
-<!-- 3. Sticky セクション（namae） -->
-<section class="sticky-section" style="background-image: url('bg_main2.png')">
-    <div class="sticky-content">
-        <img src="namae.png" class="content-img">
+  <!-- =========================== -->
+  <!-- ② 動画 + setumei セクション -->
+  <!-- =========================== -->
+  <section class="video-section">
+    <div class="video-wrapper">
+      <video src="video2.mp4" autoplay muted loop playsinline></video>
+      <img src="setumei.png" class="overlay-setumei">
+      <p class="scroll-hint">スクロールしてください</p>
     </div>
-</section>
+  </section>
 
-<!-- 4. Sticky セクション（arasuji） -->
-<section class="sticky-section" style="background-image: url('bg_main2.png')">
-    <div class="sticky-content">
-        <img src="arasuji.png" class="content-img">
-    </div>
-</section>
 
-<script src="script.js"></script>
+  <!-- =========================== -->
+  <!-- ③ sticky セクション1：namae -->
+  <!-- =========================== -->
+  <section class="sticky-section">
+    <div class="sticky-bg"></div>
+    <img src="namae.png" class="sticky-img">
+  </section>
+
+
+  <!-- =========================== -->
+  <!-- ④ sticky セクション2：arasuji -->
+  <!-- =========================== -->
+  <section class="sticky-section">
+    <div class="sticky-bg"></div>
+    <img src="arasuji.png" class="sticky-img">
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
