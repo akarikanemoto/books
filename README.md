@@ -19,7 +19,6 @@
 
     <img src="setumei.png" id="setumeiImg" class="setumei">
 
-    <div id="scrollHint" class="scroll-hint">▼ スクロールしてください ▼</div>
 </section>
 
 <!-- 3. Sticky セクション（namae） -->
