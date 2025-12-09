@@ -1,67 +1,40 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Shiori Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>演出ページ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-        color: white;
-        background: black;
-        overflow-x: hidden;
-    }
+<!-- 1. タイトルセクション -->
+<section class="title-section">
+    <img src="img/title.png" class="title-img">
+</section>
 
-    /* タイトルセクション */
-    .title-section {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: black;
-    }
+<!-- 2. 動画セクション -->
+<section class="video-section">
+    <video id="bgVideo" src="video/video2.mp4" muted playsinline></video>
 
-    .title-image {
-        width: 70%;
-        max-width: 380px;
-        opacity: 0;
-        animation: fadeUp 2s ease forwards;
-    }
+    <img src="img/setumei.png" class="setumei-img">
 
-    @keyframes fadeUp {
-        0% { opacity: 0; transform: translateY(20px); }
-        100% { opacity: 1; transform: translateY(0); }
-    }
+    <p class="scroll-text">スクロールしてください</p>
+</section>
 
-    /* 池動画（背景固定） */
-    .video-wrapper {
-        position: relative;
-        height: 100vh;
-        width: 100%;
-        overflow: hidden;
-    }
+<!-- 3. Stickyセクション（背景は固定画像） -->
+<section class="sticky-section" style="background-image:url('img/bg.jpg');">
+    <div class="sticky-wrap">
+        <img src="img/namae.png" class="sticky-img">
+    </div>
+</section>
 
-    #pondVideo {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-    }
+<section class="sticky-section" style="background-image:url('img/bg.jpg');">
+    <div class="sticky-wrap">
+        <img src="img/arasuji.png" class="sticky-img">
+    </div>
+</section>
 
-    /* ポップアニメーション（その場でバウンド） */
-    .pop {
-        width: 220px;
-        margin: 0 auto;
-        opacity: 0;
-        animation: popIn 0.9s ease-out forwards;
-    }
-
-    @keyframes popIn {
-        0% { transform: scale(0.6); opacity: 0; }
-        60% { tran
+<script src="script.js"></script>
+</body>
+</html>
