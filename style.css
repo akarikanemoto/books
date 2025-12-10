@@ -1,10 +1,12 @@
+/* 全体設定 */
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  background: transparent;
 }
 
-/* 背景を画面いっぱいに固定 */
+/* 背景を全面に広げて固定 */
 .bg {
   position: fixed;
   inset: 0;
@@ -17,25 +19,29 @@ body {
   object-fit: cover;
 }
 
-/* 全要素、白背景を強制的にオフ */
+/* 画像と動画のデフォルト背景を透明に */
 img, video {
-  background: transparent !important;
+  background-color: transparent !important;
 }
 
+/* コンテンツエリア */
 .content {
   padding-top: 40px;
 }
 
+/* タイトル */
 .title {
   width: 70%;
+  max-width: 700px;
   display: block;
   margin: 40px auto;
 }
 
-/* 動画と説明を重ねる */
+/* 動画ラップ（説明画像を重ねる） */
 .video-wrapper {
   position: relative;
   width: 80%;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -44,6 +50,7 @@ img, video {
   border-radius: 10px;
 }
 
+/* 動画の上に重ねる説明画像 */
 .setumei {
   position: absolute;
   top: 10%;
@@ -51,19 +58,22 @@ img, video {
   width: 40%;
 }
 
-/* スクロール固定の要素 */
+/* スクロール固定画像 */
 .fixed {
   position: fixed;
   top: 20%;
   z-index: 10;
+  pointer-events: none;
 }
 
 .fixed-name {
   left: 5%;
   width: 25%;
+  max-width: 250px;
 }
 
 .fixed-arasuji {
   right: 5%;
   width: 32%;
+  max-width: 280px;
 }
