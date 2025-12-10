@@ -178,7 +178,7 @@ function ScrollSnapSection({ backgroundImage, frontImage }: ScrollSnapSectionPro
       {/* ポップアップする前面画像 */}
       <div className="relative h-full flex items-center justify-center">
         <motion.div
-          initial={{ opacity: 0, scale: 0.5, y: 50 }}
+          initial={{ opacity: 0, scale: 0.2, y: 50 }}
           animate={isVisible ? { opacity: 1, scale: 1, y: 0 } : {}}
           transition={{ duration: 0.8, type: 'spring', bounce: 0.4 }}
           className="w-96 h-96 rounded-2xl overflow-hidden shadow-2xl"
