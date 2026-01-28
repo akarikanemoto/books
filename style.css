@@ -7,20 +7,23 @@ html, body {
   overflow: hidden;
 }
 
-/* ===== 画面中央に配置するラッパー ===== */
+/* ===== 画面中央配置 ===== */
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: black; /* 余白が出た場合の保険（好みで変更OK） */
+  background: black;
 }
 
-/* ===== 全体サイズ固定 ===== */
+/* ===== コンテナ ===== */
 .container {
   position: relative;
   width: 1170px;
   height: 2532px;
   overflow: hidden;
+
+  /* スマホで中央ズレしないための保険 */
+  transform-origin: center center;
 }
 
 /* ===== 背景 ===== */
@@ -34,7 +37,7 @@ body {
   z-index: 0;
 }
 
-/* ===== 共通レイヤー（完全中央） ===== */
+/* ===== 共通レイヤー ===== */
 .layer {
   position: absolute;
   inset: 0;
@@ -44,7 +47,7 @@ body {
   z-index: 1;
 }
 
-/* ===== 画像2：setumei ===== */
+/* ===== 画像2 ===== */
 #setumei {
   width: 80%;
   height: auto;
@@ -52,7 +55,7 @@ body {
   transform: scale(0.8);
 }
 
-/* ===== 画像3：book ===== */
+/* ===== 画像3 ===== */
 #book {
   width: 60%;
   height: auto;
