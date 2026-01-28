@@ -1,58 +1,59 @@
 html, body {
 margin: 0;
 padding: 0;
-width: 100%;
-height: 100%;
+width: 1170px;
+height: 2532px;
 overflow: hidden;
 }
 
 
 body {
-font-family: sans-serif;
+position: relative;
 }
 
 
-/* 背景（haikei.png） */
+/* 背景（固定・余白なし） */
 .background {
 position: fixed;
 top: 0;
 left: 0;
-width: 100vw;
-height: 100vh;
-background: url('haikei.png') no-repeat center center;
-background-size: cover;
+width: 1170px;
+height: 2532px;
+background: url('haikei.png') no-repeat center top;
+background-size: 1170px 2532px;
+z-index: 1;
 }
 
 
-/* ボタン（botan.png） */
-.button {
+/* 画像2：説明 */
+.setumei {
 position: fixed;
-bottom: 24px;
-left: 50%;
-transform: translateX(-50%);
-width: 80px;
-cursor: pointer;
+top: 0;
+left: 0;
+width: 1170px;
+height: 2532px;
+object-fit: contain;
+opacity: 0;
+transform: scale(1.2);
+transition: opacity 0.8s ease, transform 0.8s ease;
 z-index: 2;
 }
 
 
-/* フェード表示用（book.png） */
-.overlay {
-position: fixed;
-top: 0;
-left: 0;
-width: 100vw;
-height: 100vh;
-background: url('book.png') no-repeat center center;
-background-size: cover;
-opacity: 0;
-pointer-events: none;
-transition: opacity 0.5s ease;
-z-index: 3;
+.setumei.active {
+opacity: 1;
+transform: scale(1);
 }
 
 
-.overlay.active {
-opacity: 1;
-pointer-events: auto;
+/* 画像3：最終表示（アニメなし） */
+.book {
+position: fixed;
+top: 0;
+left: 0;
+width: 1170px;
+height: 2532px;
+object-fit: contain;
+display: none;
+z-index: 3;
 }
