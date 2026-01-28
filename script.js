@@ -1,12 +1,22 @@
-const button = document.getElementById('openButton');
-const overlay = document.getElementById('overlay');
+const setumei = document.getElementById('setumei');
+const book = document.getElementById('book');
 
 
-button.addEventListener('click', () => {
-overlay.classList.add('active');
-});
+// ページ表示直後に説明画像を表示
+window.addEventListener('load', () => {
+// フェードイン＋拡大
+setumei.classList.add('active');
 
 
-overlay.addEventListener('click', () => {
-overlay.classList.remove('active');
+// 3秒後にフェードアウト
+setTimeout(() => {
+setumei.classList.remove('active');
+}, 3000);
+
+
+// フェードアウト完了後に book を表示
+setTimeout(() => {
+setumei.style.display = 'none';
+book.style.display = 'block';
+}, 3800); // フェード時間(0.8s)を考慮
 });
