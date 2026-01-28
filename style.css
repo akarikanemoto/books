@@ -7,15 +7,17 @@ html, body {
 }
 
 #setumei {
-  max-width: 60%;
-  height: auto;
+  width: 80%;      /* ← 画面に対する割合 */
+  height: auto;    /* 縦横比を保つ */
+  opacity: 0;
+  transform: scale(0.8);
 }
 
 #book {
-  max-width: 70%;
+  width: 60%;
   height: auto;
+  opacity: 0;
 }
-
 .container {
   position: relative;
   width: 1170px;
