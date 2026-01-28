@@ -47,21 +47,26 @@ body {
   z-index: 1;
 }
 
-/* ===== 画像2 ===== */
+/* ===== 画像2：setumei ===== */
 #setumei {
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
   height: auto;
+
   opacity: 0;
   transform: scale(0.8);
 }
 
-/* ===== 画像3 ===== */
+/* ===== 画像3：book ===== */
 #book {
-  width: 110%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
   height: auto;
+
   opacity: 0;
 }
-
 /* ===== アニメーション ===== */
 .fade-in-scale {
   animation: fadeInScale 1.2s ease-out forwards;
