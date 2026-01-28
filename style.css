@@ -1,3 +1,4 @@
+/* ===== リセット ===== */
 html, body {
   margin: 0;
   padding: 0;
@@ -6,19 +7,7 @@ html, body {
   overflow: hidden;
 }
 
-#setumei {
-  width: 80%;
-  height: auto;
-  opacity: 0;
-  transform: scale(0.8);
-}
-
-#book {
-  width: 60%;
-  height: auto;
-  opacity: 0;
-}
-
+/* ===== 全体サイズ固定 ===== */
 .container {
   position: relative;
   width: 1170px;
@@ -27,6 +16,7 @@ html, body {
   overflow: hidden;
 }
 
+/* ===== 背景 ===== */
 .background {
   position: absolute;
   inset: 0;
@@ -37,6 +27,7 @@ html, body {
   z-index: 0;
 }
 
+/* ===== 共通レイヤー ===== */
 .layer {
   position: absolute;
   inset: 0;
@@ -46,8 +37,24 @@ html, body {
   z-index: 1;
 }
 
+/* ===== 画像2：setumei ===== */
+/* サイズ調整はここだけ触ればOK */
+#setumei {
+  width: 80%;          /* ← ここを変える */
+  height: auto;
+  opacity: 0;
+  transform: scale(0.8); /* フェードイン用 */
+}
 
-/* アニメーション */
+/* ===== 画像3：book ===== */
+/* 実寸で出したいなら width:auto に */
+#book {
+  width: 60%;          /* ← 等倍にしたい場合は auto */
+  height: auto;
+  opacity: 0;
+}
+
+/* ===== アニメーション ===== */
 .fade-in-scale {
   animation: fadeInScale 1.2s ease-out forwards;
 }
