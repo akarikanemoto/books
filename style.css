@@ -7,12 +7,19 @@ html, body {
   overflow: hidden;
 }
 
+/* ===== 画面中央に配置するラッパー ===== */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black; /* 余白が出た場合の保険（好みで変更OK） */
+}
+
 /* ===== 全体サイズ固定 ===== */
 .container {
   position: relative;
   width: 1170px;
   height: 2532px;
-  margin: 0 auto;
   overflow: hidden;
 }
 
@@ -27,7 +34,7 @@ html, body {
   z-index: 0;
 }
 
-/* ===== 共通レイヤー ===== */
+/* ===== 共通レイヤー（完全中央） ===== */
 .layer {
   position: absolute;
   inset: 0;
@@ -38,18 +45,16 @@ html, body {
 }
 
 /* ===== 画像2：setumei ===== */
-/* サイズ調整はここだけ触ればOK */
 #setumei {
-  width: 80%;          /* ← ここを変える */
+  width: 80%;
   height: auto;
   opacity: 0;
-  transform: scale(0.8); /* フェードイン用 */
+  transform: scale(0.8);
 }
 
 /* ===== 画像3：book ===== */
-/* 実寸で出したいなら width:auto に */
 #book {
-  width: 60%;          /* ← 等倍にしたい場合は auto */
+  width: 60%;
   height: auto;
   opacity: 0;
 }
