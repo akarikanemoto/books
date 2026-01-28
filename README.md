@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webサイト</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Web Site</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="background-layer"></div>
+  <div class="container">
+    <div class="background"></div>
 
-    <div class="content-container">
-        <img src="book.png" class="book" alt="Book">
-        
-        <img src="setumei.png" class="setumei" alt="Setsumei">
+    <div class="layer">
+      <img id="setumei" src="setumei.png" alt="">
     </div>
 
+    <div class="layer">
+      <img id="book" src="book.png" alt="">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
