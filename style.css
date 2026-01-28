@@ -31,7 +31,7 @@ body {
   position: absolute;
   inset: 0;
   background-image: url("haikei.png");
-  background-size: cover;
+  background-size: contain;   /* ← ここを変更 */
   background-position: center;
   background-repeat: no-repeat;
   z-index: 0;
