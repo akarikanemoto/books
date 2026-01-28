@@ -33,6 +33,7 @@ left: 0;
 width: 1170px;
 height: 2532px;
 object-fit: contain;
+background: transparent;
 opacity: 0;
 transform: scale(1.2);
 transition: opacity 0.8s ease, transform 0.8s ease;
@@ -54,6 +55,7 @@ left: 0;
 width: 1170px;
 height: 2532px;
 object-fit: contain;
+background: transparent;
 display: none;
 z-index: 3;
 }
